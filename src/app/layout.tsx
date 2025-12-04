@@ -1,3 +1,4 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
@@ -34,6 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <head>
+        <link rel="icon" href="https://delhi.motorkhan.com/images/motor-khan-rithala-rohini-delhi-black.png" />
+        <link rel="shortcut icon" href="https://delhi.motorkhan.com/images/motor-khan-rithala-rohini-delhi-black.png" />
+        <link rel="apple-touch-icon" href="https://delhi.motorkhan.com/images/motor-khan-rithala-rohini-delhi-black.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
