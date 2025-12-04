@@ -11,7 +11,7 @@ export default function ClientPageWrapper() {
         <div className="nav-progress">
           <div className="nav-progress-fill"></div>
         </div>
-        <div className="nav-text">01 / 10</div>
+        <div className="nav-text">01 / 11</div>
       </div>
       <HorizontalScroll />
     </>

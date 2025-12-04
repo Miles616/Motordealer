@@ -65,6 +65,10 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="9">
             <span className="section-nav-item-number">10</span>
+            <span>GET IN TOUCH</span>
+          </a>
+          <a className="section-nav-item" data-index="10">
+            <span className="section-nav-item-number">11</span>
             <span>MAIN WEBSITE</span>
           </a>
         </div>
@@ -189,7 +193,7 @@ export default function Home() {
 
             {/* Seventh panel: New big text with image */}
             <section className="panel panel-full" data-index="6">
-               <div className="image-wrapper">
+              <div className="image-wrapper">
                 <Image src={getImage('performance-car')?.imageUrl ?? ''} alt="Car engine" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="sports car motion" />
               </div>
               <div className="panel-full-overlay"></div>
@@ -221,7 +225,7 @@ export default function Home() {
               <div className="panel-full-content">
                 <div className="contact-container">
                   <div className="contact-content">
-                    <div className="contact-name">GET IN TOUCH</div>
+                    <div className="contact-name">CONTACT</div>
                       <div className="email-wrapper">
                         <a href="mailto:motorkhandelhi@gmail.com" className="email">motorkhandelhi@gmail.com</a>
                         <button className="copy-email" title="Copy email" aria-label="Copy email to clipboard">
@@ -237,8 +241,27 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Tenth panel: Main Website */}
+            {/* Tenth panel: Get in Touch */}
             <section className="panel panel-full" data-index="9">
+              <div className="image-wrapper">
+                  <Image src={getImage('contact-car')?.imageUrl ?? ''} alt="Contact background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior" />
+              </div>
+              <div className="panel-full-overlay"></div>
+              <div className="panel-full-content">
+                <div className="contact-container">
+                  <div className="contact-content">
+                    <div className="contact-name">GET IN TOUCH</div>
+                      <div className="email-wrapper" style={{flexDirection: 'column', gap: 'var(--space-4)'}}>
+                        <a href="tel:+91987135670" className="email">+91 9871 356 70</a>
+                        <a href="tel:+918595853918" className="email">+91 8595 853 918</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Eleventh panel: Main Website */}
+            <section className="panel panel-full" data-index="10">
               <div className="panel-full-overlay" style={{backgroundColor: 'var(--color-primary)'}}></div>
               <div className="panel-full-content">
                 <div className="contact-container">
