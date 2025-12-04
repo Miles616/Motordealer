@@ -275,9 +275,11 @@ export default function Home() {
                   <div className="contact-content">
                     <div className="contact-name">ADDRESS</div>
                       <div className="email-wrapper" style={{flexDirection: 'column', gap: 'var(--space-4)', padding: 'var(--space-5)', textAlign: 'center'}}>
-                        <p className="email" style={{fontSize: 'var(--text-lg)', lineHeight: '1.5'}}>
-                          Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085
-                        </p>
+                        <a href="https://maps.app.goo.gl/Fhc6WW14PG33r8Rh7" target="_blank" rel="noopener noreferrer" className="email" style={{textDecoration: 'none'}}>
+                          <p className="email" style={{fontSize: 'var(--text-lg)', lineHeight: '1.5'}}>
+                            Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085
+                          </p>
+                        </a>
                       </div>
                   </div>
                 </div>
