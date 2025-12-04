@@ -139,7 +139,7 @@ export default function HorizontalScroll() {
       if (window.innerWidth <= 768) { // Mobile
         panelWidth = window.innerWidth;
         if (panelsContainer) {
-          panelsContainer.style.width = `${panelWidth}px`;
+          panelsContainer.style.width = `${PANEL_COUNT * panelWidth}px`;
         }
       } else { // Desktop
         panelWidth = window.innerWidth - menuOffset;
