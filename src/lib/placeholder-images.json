@@ -38,9 +38,9 @@
     },
     {
       "id": "performance-car",
-      "description": "A close-up of a powerful car engine.",
-      "imageUrl": "https://images.unsplash.com/photo-1552656967-7a0991a13906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXIlMjBlbmdpbmV8ZW58MHx8fHwxNzY0NzU2MDMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "car engine"
+      "description": "A sports car in motion on a race track.",
+      "imageUrl": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBjYXJ8ZW58MHx8fHwxNzY0NzYwMDM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sports car motion"
     },
     {
       "id": "contact-car",
