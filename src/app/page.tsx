@@ -287,14 +287,15 @@ export default function Home() {
             </section>
 
             {/* Twelfth panel: Main Website */}
-            <section className="panel panel-full" data-index="11">
-              <div className="panel-full-overlay" style={{backgroundColor: 'var(--color-primary)'}}></div>
-              <div className="panel-full-content">
-                <div className="contact-container">
-                  <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="main-website-link">
-                    <div className="contact-name red-text">MAIN WEBSITE</div>
-                  </a>
-                </div>
+            <section className="panel panel-video" data-index="11">
+              <video className="video-background" autoPlay loop muted playsInline>
+                <source src="https://delhi.motorkhan.com/videos/motor-khan-rithala-rohini-delhi.mp4" type="video/mp4" />
+              </video>
+              <div className="panel-video-overlay"></div>
+              <div className="panel-video-content">
+                <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="main-website-link">
+                  <div className="mega-text">MAIN WEBSITE</div>
+                </a>
               </div>
             </section>
 
