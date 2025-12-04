@@ -1,7 +1,9 @@
 
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { AvatarCircles } from "@/components/ui/avatar-circles"
+import { Star } from 'lucide-react';
 
 export default function Home() {
   // A helper function to find an image by its ID
@@ -175,6 +177,14 @@ export default function Home() {
                       { imageUrl: "https://picsum.photos/seed/7/100/100" },
                     ]}
                   />
+                  <div className="flex justify-center items-center gap-0.5 mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="h-5 w-5 text-amber-400 fill-amber-400"
+                        />
+                      ))}
+                  </div>
                 </div>
               </div>
             </section>
