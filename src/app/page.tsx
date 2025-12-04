@@ -46,7 +46,7 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="6">
             <span className="section-nav-item-number">07</span>
-            <span>Performance</span>
+            <span>Power</span>
           </a>
           <a className="section-nav-item" data-index="7">
             <span className="section-nav-item-number">08</span>
@@ -180,7 +180,7 @@ export default function Home() {
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
-                <div className="mega-text">PERFORMANCE</div>
+                <div className="mega-text">POWER</div>
                 <div className="text">
                   <p className="split-text">Unleash the power within. We specialize in high-performance vehicles that deliver an adrenaline-fueled driving experience.</p>
                 </div>
