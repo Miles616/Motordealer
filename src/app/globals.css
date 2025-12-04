@@ -915,7 +915,12 @@ body.menu-expanded .page-container {
   }
 
   .title {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
+    line-height: 1.2;
+  }
+
+  .text {
+    font-size: var(--text-sm);
   }
 
   .subtitle {
