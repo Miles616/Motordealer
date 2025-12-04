@@ -21,8 +21,8 @@ export default function Home() {
             <Image
               src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png"
               alt="Motor Khan Logo"
-              width={120}
-              height={40}
+              width={100}
+              height={33}
             />
           </div>
         </div>

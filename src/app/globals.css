@@ -150,7 +150,7 @@ body.menu-expanded .page-container {
 
 .logo {
   transition: opacity var(--transition-medium);
-  width: 120px;
+  width: 100px;
   height: auto;
   transform: rotate(-90deg);
 }
