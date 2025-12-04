@@ -70,6 +70,9 @@ export default function Home() {
           </a>
         </div>
         <div className="left-menu-bottom">
+          <a href="https://wa.me/918595853918" target="_blank" rel="noopener noreferrer" className="whatsapp-icon" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style={{width: '24px', height: '24px', fill: 'var(--color-text-muted)'}}><path d="m16 0c-8.836 0-16 7.163-16 16s7.164 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zm0 0" /></svg>
+          </a>
           <div className="copyright">© MotorKhan 2025</div>
         </div>
       </div>
@@ -182,7 +185,7 @@ export default function Home() {
               <div className="panel-full-content">
                 <div className="contact-container">
                   <div className="contact-content">
-                    <div className="contact-name">CONTACT</div>
+                    <div className="contact-name red-text">CONTACT</div>
                       <div className="email-wrapper">
                         <a href="mailto:motorkhandelhi@gmail.com" className="email">motorkhandelhi@gmail.com</a>
                         <button className="copy-email" title="Copy email" aria-label="Copy email to clipboard">
@@ -207,7 +210,7 @@ export default function Home() {
               <div className="panel-full-content">
                 <div className="contact-container">
                   <div className="contact-content">
-                    <div className="contact-name">GET IN TOUCH</div>
+                    <div className="contact-name red-text">GET IN TOUCH</div>
                       <div className="email-wrapper" style={{flexDirection: 'column', gap: 'var(--space-4)'}}>
                         <a href="tel:+91987135670" className="email">+91 9871 356 70</a>
                         <a href="tel:+918595853918" className="email">+91 8595 853 918</a>
@@ -226,7 +229,7 @@ export default function Home() {
               <div className="panel-full-content">
                 <div className="contact-container">
                   <div className="contact-content">
-                    <div className="contact-name">ADDRESS</div>
+                    <div className="contact-name red-text">ADDRESS</div>
                       <div className="email-wrapper" style={{flexDirection: 'column', gap: 'var(--space-4)', padding: 'var(--space-5)', textAlign: 'center'}}>
                         <a href="https://maps.app.goo.gl/Fhc6WW14PG33r8Rh7" target="_blank" rel="noopener noreferrer" className="email" style={{textDecoration: 'none'}}>
                           <p className="email" style={{fontSize: 'var(--text-lg)', lineHeight: '1.5'}}>
