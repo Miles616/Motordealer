@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { AvatarCircles } from "@/components/ui/avatar-circles"
 
 export default function Home() {
   // A helper function to find an image by its ID
@@ -151,38 +152,27 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Sixth panel: Split with quotes */}
-            <section className="panel panel-split" data-index="5">
-              <div className="panel-left">
-                <div className="panel-content">
-                  <div className="direction-label">Arjun, New Delhi</div>
-                  <div className="quote-container">
-                    <div className="quote">"The team at Motor Khan made my dream of owning a luxury SUV a reality. The entire process was seamless and professional. Their attention to detail is unmatched in Delhi."</div>
-                    <div className="author">PROUD OWNER, 2023</div>
-                  </div>
-                  <div className="image-container">
-                    <div className="image-wrapper">
-                      <Image src={getImage('testimonial-car-1')?.imageUrl ?? ''} alt="Happy customer with car" className="parallax" data-speed="0.15" width={450} height={300} style={{objectFit: 'cover'}} data-ai-hint="happy customer" />
-                    </div>
-                  </div>
-                  <div className="conclusion-text">
-                    <p className="split-text">We're not just selling cars; we are building a community of enthusiasts who found the best used car for sale with us.</p>
-                  </div>
-                </div>
+            {/* Sixth panel: Reviews */}
+            <section className="panel panel-full" data-index="5">
+              <div className="image-wrapper">
+                <Image src={getImage('testimonial-car-1')?.imageUrl ?? ''} alt="Customer reviews background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior abstract" />
               </div>
-              <div className="panel-right">
-                <div className="panel-content">
-                  <div className="direction-label">Priya, Gurugram</div>
-                  <div className="quote-container">
-                    <div className="quote">"Finding a trustworthy car dealer near me is hard. Motor Khan stands out with their transparent process and exceptional customer service. I couldn't be happier with my new sedan."</div>
-                    <div className="author">HAPPY CLIENT, 2024</div>
-                  </div>
-                  <div className="full-quote">
-                    "Their knowledge and passion for cars are evident. They guided me to the perfect second hand car that matched my lifestyle and budget."
-                  </div>
-                  <div className="text">
-                    <p className="split-text">Our greatest pride is the satisfaction of our clients and the stories they share on the road with their affordable second hand car.</p>
-                  </div>
+              <div className="panel-full-overlay"></div>
+              <div className="panel-full-content">
+                <div className="chapter">Hear From Our Happy Clients</div>
+                <h2 className="title split-text">The Voices of Our Community.</h2>
+                <div className="text">
+                  <p className="split-text">Our greatest pride is the satisfaction of our clients and the stories they share on the road with their affordable second-hand car.</p>
+                </div>
+                <div style={{marginTop: 'var(--space-8)'}}>
+                  <AvatarCircles
+                    numPeople={99}
+                    avatarUrls={[
+                      { imageUrl: "https://picsum.photos/seed/10/40/40", profileUrl: "#" },
+                      { imageUrl: "https://picsum.photos/seed/11/40/40", profileUrl: "#" },
+                      { imageUrl: "https://picsum.photos/seed/12/40/40", profileUrl: "#" },
+                    ]}
+                  />
                 </div>
               </div>
             </section>
