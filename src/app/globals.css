@@ -90,6 +90,30 @@ body:active {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 }
 
+.left-menu-bottom {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 101;
+}
+
+.copyright {
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  transition-delay: 0.2s;
+}
+
+.left-menu.expanded .copyright {
+  opacity: 1;
+}
+
 /* Push menu implementation */
 body.menu-expanded .page-container {
   left: var(--menu-width);
