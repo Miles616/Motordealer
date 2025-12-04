@@ -42,7 +42,7 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="5">
             <span className="section-nav-item-number">06</span>
-            <span>TESTIMONIALS</span>
+            <span>REVIEWS</span>
           </a>
           <a className="section-nav-item" data-index="6">
             <span className="section-nav-item-number">07</span>
