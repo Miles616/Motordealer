@@ -902,7 +902,7 @@ body.menu-expanded .page-container {
   }
 
   .email {
-    font-size: var(--text-xl);
+    font-size: var(--text-base);
   }
 
   .copy-email {
