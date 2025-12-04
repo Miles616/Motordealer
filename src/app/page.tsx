@@ -294,7 +294,7 @@ export default function Home() {
               <div className="panel-video-overlay"></div>
               <div className="panel-video-content">
                 <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="main-website-link">
-                  <div className="mega-text" dangerouslySetInnerHTML={{ __html: 'MAIN<br />WEBSITE' }}></div>
+                  <div className="mega-text" style={{ lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: 'MAIN<br />WEBSITE' }}></div>
                 </a>
               </div>
             </section>
