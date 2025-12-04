@@ -26,6 +26,7 @@ export default function HorizontalScroll() {
     // Constants
     const SMOOTH_FACTOR = 0.065;
     const WHEEL_SENSITIVITY = 1.0;
+    const TOUCH_SENSITIVITY = 1.5;
     const PANEL_COUNT = 12;
 
     // State variables
@@ -44,10 +45,10 @@ export default function HorizontalScroll() {
 
     // Touch variables
     let isDragging = false;
-    let startX = 0;
+    let startY = 0;
     let startScrollX = 0;
-    let velocityX = 0;
-    let lastTouchX = 0;
+    let velocityY = 0;
+    let lastTouchY = 0;
     let lastTouchTime = 0;
 
     // Helper functions
@@ -354,9 +355,9 @@ export default function HorizontalScroll() {
         return; // Don't drag when clicking menu or copy button
 
       isDragging = true;
-      startX = e.clientX;
+      startY = e.clientY;
       startScrollX = currentX;
-      lastTouchX = e.clientX;
+      lastTouchY = e.clientY;
       lastTouchTime = Date.now();
       if(document.body) {
         document.body.style.cursor = "grabbing";
@@ -367,17 +368,17 @@ export default function HorizontalScroll() {
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging) return;
-      const dx = e.clientX - startX;
-      targetX = clamp(startScrollX - dx, 0, maxScroll);
+      const dy = e.clientY - startY;
+      targetX = clamp(startScrollX - dy, 0, maxScroll);
 
       const currentTime = Date.now();
       const timeDelta = currentTime - lastTouchTime;
       if (timeDelta > 0) {
-        const touchDelta = lastTouchX - e.clientX;
-        velocityX = (touchDelta / timeDelta) * 15;
+        const touchDelta = lastTouchY - e.clientY;
+        velocityY = (touchDelta / timeDelta) * 15;
       }
 
-      lastTouchX = e.clientX;
+      lastTouchY = e.clientY;
       lastTouchTime = currentTime;
       startAnimation();
       handleScrollActivity();
@@ -390,8 +391,8 @@ export default function HorizontalScroll() {
         document.body.style.cursor = "grab";
       }
 
-      if (Math.abs(velocityX) > 0.5) {
-        targetX = clamp(targetX + velocityX * 8, 0, maxScroll);
+      if (Math.abs(velocityY) > 0.5) {
+        targetX = clamp(targetX + velocityY * 8, 0, maxScroll);
       }
 
       const nearestPanel = Math.round(targetX / panelWidth);
@@ -405,28 +406,28 @@ export default function HorizontalScroll() {
         return; // Don't drag when touching menu
 
       isDragging = true;
-      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
       startScrollX = currentX;
-      lastTouchX = e.touches[0].clientX;
+      lastTouchY = e.touches[0].clientY;
       lastTouchTime = Date.now();
       handleScrollActivity();
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       if (!isDragging) return;
-      const dx = e.touches[0].clientX - startX;
-      targetX = clamp(startScrollX - dx, 0, maxScroll);
+      const dy = e.touches[0].clientY - startY;
+      targetX = clamp(startScrollX - (dy * TOUCH_SENSITIVITY), 0, maxScroll);
 
       const currentTime = Date.now();
       const timeDelta = currentTime - lastTouchTime;
       if (timeDelta > 0) {
-        const touchDelta = lastTouchX - e.touches[0].clientX;
-        velocityX = (touchDelta / timeDelta) * 12;
+        const touchDelta = lastTouchY - e.touches[0].clientY;
+        velocityY = (touchDelta / timeDelta) * 12;
       }
 
-      lastTouchX = e.touches[0].clientX;
+      lastTouchY = e.touches[0].clientY;
       lastTouchTime = currentTime;
-      e.preventDefault();
+      
       startAnimation();
       handleScrollActivity();
     };
@@ -435,8 +436,8 @@ export default function HorizontalScroll() {
       if (!isDragging) return;
       isDragging = false;
 
-      if (Math.abs(velocityX) > 0.5) {
-        targetX = clamp(targetX + velocityX * 6, 0, maxScroll);
+      if (Math.abs(velocityY) > 0.5) {
+        targetX = clamp(targetX + velocityY * 6, 0, maxScroll);
       }
 
       const nearestPanel = Math.round(targetX / panelWidth);
