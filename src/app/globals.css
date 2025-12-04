@@ -948,4 +948,12 @@ body.menu-expanded .page-container {
   .copy-email {
     margin-top: var(--space-2);
   }
+
+  .navigation {
+    gap: var(--space-3);
+  }
+
+  .nav-progress {
+    width: 80px;
+  }
 }
