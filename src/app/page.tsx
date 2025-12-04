@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { AvatarCircles } from "@/components/ui/avatar-circles"
-import { Star } from 'lucide-react';
 
 export default function Home() {
   // A helper function to find an image by its ID
@@ -162,13 +161,8 @@ export default function Home() {
               <div className="panel-full-content flex flex-col items-center justify-center">
                 <div className="chapter">What Our Clients Say</div>
                 <h2 className="title split-text">Rated Excellent By Car Lovers In Delhi.</h2>
-                <div className="flex my-8">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-8 w-8 text-yellow-400 fill-yellow-400"
-                    />
-                  ))}
+                <div className="flex my-8 text-4xl">
+                  {'⭐️'.repeat(5)}
                 </div>
                 <AvatarCircles
                   avatarUrls={[
