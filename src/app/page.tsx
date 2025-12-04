@@ -154,10 +154,6 @@ export default function Home() {
 
             {/* Sixth panel: Reviews */}
             <section className="panel panel-full" data-index="5">
-              <div className="image-wrapper">
-                <Image src={getImage('testimonial-car-1')?.imageUrl ?? ''} alt="Customer reviews background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior abstract" />
-              </div>
-              <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
                 <div className="chapter">Hear From Our Happy Clients</div>
                 <h2 className="title split-text">The Voices of Our Community.</h2>
