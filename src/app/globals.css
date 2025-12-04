@@ -239,7 +239,9 @@ body.menu-expanded .page-container {
   transform: translateX(-20px);
   position: relative;
   width: 100%;
-  padding-right: var(--space-5);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
 }
 
 .section-nav-item.animate-in {
@@ -259,15 +261,12 @@ body.menu-expanded .page-container {
 }
 
 .section-nav-item-number {
-  position: absolute;
-  top: -2px;
-  right: 0;
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 0.7rem;
   color: var(--color-accent);
-  opacity: 0;
   transition: opacity var(--transition-medium);
+  min-width: 1.2rem;
 }
 
 .section-nav-item:hover .section-nav-item-number,
