@@ -160,19 +160,15 @@ export default function Home() {
             {/* Sixth panel: Reviews */}
             <section className="panel panel-full" data-index="5">
               <div className="panel-full-content flex flex-col items-center justify-center">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl font-bold">4.9</div>
-                  <div className="flex flex-col">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-6 w-6 text-yellow-400 fill-yellow-400"
-                        />
-                      ))}
-                    </div>
-                    <div className="text-sm text-gray-400 mt-1">9 reviews</div>
-                  </div>
+                <div className="chapter">What Our Clients Say</div>
+                <h2 className="title split-text">Rated Excellent By Car Lovers In Delhi.</h2>
+                <div className="flex my-8">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-8 w-8 text-yellow-400 fill-yellow-400"
+                    />
+                  ))}
                 </div>
                 <AvatarCircles
                   avatarUrls={[
