@@ -41,7 +41,7 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="3">
             <span className="section-nav-item-number">04</span>
-            <span>OUR PROMISE</span>
+            <span>PROMISE</span>
           </a>
           <a className="section-nav-item" data-index="4">
             <span className="section-nav-item-number">05</span>
@@ -53,26 +53,18 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="6">
             <span className="section-nav-item-number">07</span>
-            <span>POWER</span>
+            <span>CONTACT</span>
           </a>
           <a className="section-nav-item" data-index="7">
             <span className="section-nav-item-number">08</span>
-            <span>VISION</span>
+            <span>GET IN TOUCH</span>
           </a>
           <a className="section-nav-item" data-index="8">
             <span className="section-nav-item-number">09</span>
-            <span>CONTACT</span>
+            <span>ADDRESS</span>
           </a>
           <a className="section-nav-item" data-index="9">
             <span className="section-nav-item-number">10</span>
-            <span>GET IN TOUCH</span>
-          </a>
-          <a className="section-nav-item" data-index="10">
-            <span className="section-nav-item-number">11</span>
-            <span>ADDRESS</span>
-          </a>
-          <a className="section-nav-item" data-index="11">
-            <span className="section-nav-item-number">12</span>
             <span>MAIN WEBSITE</span>
           </a>
         </div>
@@ -195,33 +187,8 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Seventh panel: New big text with image */}
+            {/* Seventh panel: Contact */}
             <section className="panel panel-full" data-index="6">
-              <div className="image-wrapper">
-                <Image src={getImage('performance-car')?.imageUrl ?? ''} alt="Car engine" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="sports car motion" />
-              </div>
-              <div className="panel-full-overlay"></div>
-              <div className="panel-full-content">
-                <div className="mega-text">POWER</div>
-                <div className="text">
-                  <p className="split-text">Unleash the power within. We specialize in high-performance used cars that deliver an adrenaline-fueled driving experience without breaking the bank.</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Eighth panel: Video with text */}
-            <section className="panel panel-video" data-index="7">
-              <video className="video-background" autoPlay loop muted playsInline>
-                <source src="https://cdn.cosmos.so/fdfc1996-66fd-4536-8d36-0ad173a4acff.mp4" type="video/mp4" />
-              </video>
-              <div className="panel-video-overlay"></div>
-              <div className="panel-video-content">
-                <div className="mega-text">VISION</div>
-              </div>
-            </section>
-
-            {/* Ninth panel: Contact */}
-            <section className="panel panel-full" data-index="8">
               <div className="image-wrapper">
                   <Image src={getImage('contact-car')?.imageUrl ?? ''} alt="Contact background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior" />
               </div>
@@ -245,8 +212,8 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Tenth panel: Get in Touch */}
-            <section className="panel panel-full" data-index="9">
+            {/* Eighth panel: Get in Touch */}
+            <section className="panel panel-full" data-index="7">
               <div className="image-wrapper">
                   <Image src={getImage('contact-car')?.imageUrl ?? ''} alt="Contact background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior" />
               </div>
@@ -264,8 +231,8 @@ export default function Home() {
               </div>
             </section>
             
-            {/* Eleventh panel: Address */}
-            <section className="panel panel-full" data-index="10">
+            {/* Ninth panel: Address */}
+            <section className="panel panel-full" data-index="8">
               <div className="image-wrapper">
                   <Image src={getImage('contact-car')?.imageUrl ?? ''} alt="Contact background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior" />
               </div>
@@ -286,8 +253,8 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Twelfth panel: Main Website */}
-            <section className="panel panel-video" data-index="11">
+            {/* Tenth panel: Main Website */}
+            <section className="panel panel-video" data-index="9">
               <video className="video-background" autoPlay loop muted playsInline>
                 <source src="https://delhi.motorkhan.com/videos/motor-khan-rithala-rohini-delhi.mp4" type="video/mp4" />
               </video>
