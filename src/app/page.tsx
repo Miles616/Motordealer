@@ -158,10 +158,14 @@ export default function Home() {
 
             {/* Sixth panel: Reviews */}
             <section className="panel panel-full" data-index="5">
+              <div className="image-wrapper">
+                <Image src={getImage('testimonial-car-1')?.imageUrl ?? ''} alt="Happy customer with their new car" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="happy customer" />
+              </div>
+              <div className="panel-full-overlay"></div>
               <div className="panel-full-content flex flex-col items-center justify-center">
                 <div className="chapter">What Our Clients Say</div>
                 <h2 className="title split-text">Rated Excellent By Car Lovers In Delhi.</h2>
-                <div className="flex my-8 text-4xl">
+                <div className="flex my-4 text-4xl mb-8">
                   {'⭐️'.repeat(5)}
                 </div>
                 <AvatarCircles
@@ -204,7 +208,7 @@ export default function Home() {
             {/* Eighth panel: Get in Touch */}
             <section className="panel panel-full" data-index="7">
               <div className="image-wrapper">
-                  <Image src={getImage('contact-car')?.imageUrl ?? ''} alt="Contact background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior" />
+                  <Image src={getImage('promise-car')?.imageUrl ?? ''} alt="Open road signifying getting in touch" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="open road" />
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
@@ -223,7 +227,7 @@ export default function Home() {
             {/* Ninth panel: Address */}
             <section className="panel panel-full" data-index="8">
               <div className="image-wrapper">
-                  <Image src={getImage('contact-car')?.imageUrl ?? ''} alt="Contact background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior" />
+                  <Image src={getImage('fleet-car')?.imageUrl ?? ''} alt="Dealership location" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="car dealership" />
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
