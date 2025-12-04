@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useEffect } from "react";
@@ -153,11 +154,12 @@ export default function HorizontalScroll() {
       
       if (window.innerWidth <= 768) { // Mobile
         panelWidth = window.innerWidth;
-        if (panelsContainer) {
-          panelsContainer.style.width = `${PANEL_COUNT * panelWidth}px`;
-        }
       } else { // Desktop
         panelWidth = window.innerWidth - menuOffset;
+      }
+
+      if (panelsContainer) {
+        panelsContainer.style.width = `${PANEL_COUNT * panelWidth}px`;
       }
 
 
@@ -201,6 +203,7 @@ export default function HorizontalScroll() {
                 const index = parseInt(indexAttr, 10);
                 // Set target position to that panel
                 targetX = index * panelWidth;
+                currentPanel = index;
 
                 // Update active class
                 sectionNavItems.forEach((navItem) => {
@@ -212,8 +215,8 @@ export default function HorizontalScroll() {
                 startAnimation();
                 handleScrollActivity();
 
-                // Close menu on mobile or after navigation
-                if (window.innerWidth < 768 && menuExpanded) {
+                // Close menu after navigation
+                if (menuExpanded) {
                     menuExpanded = false;
                     leftMenu.classList.remove("expanded");
                     document.body.classList.remove("menu-expanded");
