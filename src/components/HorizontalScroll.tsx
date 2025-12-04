@@ -8,6 +8,7 @@ export default function HorizontalScroll() {
     const horizontalContainer = document.querySelector(".horizontal-container") as HTMLElement;
     const panelsContainer = document.querySelector(".panels-container") as HTMLElement;
     const panels = document.querySelectorAll(".panel");
+    const navigation = document.querySelector(".navigation") as HTMLElement;
     const progressFill = document.querySelector(".nav-progress-fill") as HTMLElement;
     const navText = document.querySelectorAll(".nav-text")[1] as HTMLElement;
     const parallaxElements = document.querySelectorAll(".parallax");
@@ -18,7 +19,7 @@ export default function HorizontalScroll() {
     const copyEmailBtn = document.querySelector(".copy-email") as HTMLElement;
     const copyTooltip = document.querySelector(".copy-tooltip") as HTMLElement;
 
-    if (!horizontalContainer || !panelsContainer || !panels.length || !progressFill || !navText || !leftMenu || !menuBtn || !sectionNavItems) {
+    if (!horizontalContainer || !panelsContainer || !panels.length || !progressFill || !navText || !leftMenu || !menuBtn || !sectionNavItems || !navigation) {
       return;
     }
 
@@ -38,6 +39,8 @@ export default function HorizontalScroll() {
     let currentPanel = 0;
     let lastPanel = -1;
     let menuExpanded = false;
+    let scrollTimeout: NodeJS.Timeout | null = null;
+
 
     // Touch variables
     let isDragging = false;
@@ -50,6 +53,17 @@ export default function HorizontalScroll() {
     // Helper functions
     const lerp = (start: number, end: number, factor: number) => start + (end - start) * factor;
     const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
+
+    // Scroll activity handler
+    const handleScrollActivity = () => {
+        navigation.classList.add('active');
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(() => {
+            navigation.classList.remove('active');
+        }, 1500);
+    }
 
     // Copy email functionality
     if (copyEmailBtn) {
@@ -195,6 +209,7 @@ export default function HorizontalScroll() {
 
                 // Start animation
                 startAnimation();
+                handleScrollActivity();
 
                 // Close menu on mobile or after navigation
                 if (window.innerWidth < 768 && menuExpanded) {
@@ -330,6 +345,7 @@ export default function HorizontalScroll() {
       e.preventDefault();
       targetX = clamp(targetX + e.deltaY * WHEEL_SENSITIVITY, 0, maxScroll);
       startAnimation();
+      handleScrollActivity();
     };
 
     const handleMouseDown = (e: MouseEvent) => {
@@ -345,6 +361,7 @@ export default function HorizontalScroll() {
       if(document.body) {
         document.body.style.cursor = "grabbing";
       }
+      handleScrollActivity();
       e.preventDefault();
     };
 
@@ -363,6 +380,7 @@ export default function HorizontalScroll() {
       lastTouchX = e.clientX;
       lastTouchTime = currentTime;
       startAnimation();
+      handleScrollActivity();
     };
 
     const handleMouseUp = () => {
@@ -391,6 +409,7 @@ export default function HorizontalScroll() {
       startScrollX = currentX;
       lastTouchX = e.touches[0].clientX;
       lastTouchTime = Date.now();
+      handleScrollActivity();
     };
 
     const handleTouchMove = (e: TouchEvent) => {
@@ -409,6 +428,7 @@ export default function HorizontalScroll() {
       lastTouchTime = currentTime;
       e.preventDefault();
       startAnimation();
+      handleScrollActivity();
     };
 
     const handleTouchEnd = () => {
@@ -500,6 +520,9 @@ export default function HorizontalScroll() {
         horizontalContainer.removeEventListener("touchmove", handleTouchMove);
         horizontalContainer.removeEventListener("touchend", handleTouchEnd);
         resizeObserver.disconnect();
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
     }
   }, []);
 
