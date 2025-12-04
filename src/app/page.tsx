@@ -190,7 +190,7 @@ export default function Home() {
             {/* Seventh panel: New big text with image */}
             <section className="panel panel-full" data-index="6">
               <div className="image-wrapper">
-                <Image src={getImage('performance-car')?.imageUrl ?? ''} alt="Car engine" className="panel-full-background parallax" data-speed="0.3" fill style={{objectFit: 'cover'}} data-ai-hint="sports car motion" />
+                <Image src={getImage('performance-car')?.imageUrl ?? ''} alt="Car engine" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="sports car motion" />
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
