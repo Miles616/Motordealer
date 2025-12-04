@@ -159,33 +159,30 @@ export default function Home() {
 
             {/* Sixth panel: Reviews */}
             <section className="panel panel-full" data-index="5">
-              <div className="panel-full-content">
-                <div className="chapter">Hear From Our Happy Clients</div>
-                <h2 className="title split-text">The Voices of Our Community.</h2>
-                <div className="text">
-                  <p className="split-text">Our greatest pride is the satisfaction of our clients and the stories they share on the road with their affordable second-hand car.</p>
-                </div>
-                <div style={{marginTop: 'var(--space-8)'}}>
-                  <AvatarCircles
-                    avatarUrls={[
-                      { imageUrl: "https://picsum.photos/seed/1/100/100" },
-                      { imageUrl: "https://picsum.photos/seed/2/100/100" },
-                      { imageUrl: "https://picsum.photos/seed/3/100/100" },
-                      { imageUrl: "https://picsum.photos/seed/4/100/100" },
-                      { imageUrl: "https://picsum.photos/seed/5/100/100" },
-                      { imageUrl: "https://picsum.photos/seed/6/100/100" },
-                      { imageUrl: "https://picsum.photos/seed/7/100/100" },
-                    ]}
-                  />
-                  <div className="flex justify-center items-center gap-0.5 mt-4">
+              <div className="panel-full-content flex flex-col items-center justify-center">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="text-4xl font-bold">4.9</div>
+                  <div className="flex flex-col">
+                    <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className="h-5 w-5 text-amber-400 fill-amber-400"
+                          className="h-6 w-6 text-yellow-400 fill-yellow-400"
                         />
                       ))}
+                    </div>
+                    <div className="text-sm text-gray-400 mt-1">9 reviews</div>
                   </div>
                 </div>
+                <AvatarCircles
+                  avatarUrls={[
+                    { imageUrl: "https://i.pravatar.cc/150?img=1" },
+                    { imageUrl: "https://i.pravatar.cc/150?img=2" },
+                    { imageUrl: "https://i.pravatar.cc/150?img=3" },
+                    { imageUrl: "https://i.pravatar.cc/150?img=4" },
+                    { imageUrl: "https://i.pravatar.cc/150?img=5" },
+                  ]}
+                />
               </div>
             </section>
 

@@ -19,22 +19,21 @@ export const AvatarCircles = ({
   return (
     <div className={cn("z-10 flex -space-x-4 rtl:space-x-reverse justify-center", className)}>
       {avatarUrls.map((url, index) => (
-        <div key={index} className="relative group">
-          <a
-            href={url.profileUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <img
-              className="h-12 w-12 rounded-full border-2 border-white dark:border-gray-800 transition-transform group-hover:scale-110"
-              src={url.imageUrl}
-              width={48}
-              height={48}
-              alt={`Avatar ${index + 1}`}
-            />
-          </a>
-        </div>
+        <a
+          key={index}
+          href={url.profileUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            className="h-12 w-12 rounded-full border-2 border-white dark:border-gray-800 transition-transform hover:scale-110"
+            src={url.imageUrl}
+            width={48}
+            height={48}
+            alt={`Avatar ${index + 1}`}
+          />
+        </a>
       ))}
     </div>
   )
