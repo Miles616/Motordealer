@@ -1,142 +1,67 @@
-'use client';
-import React, { useState, useEffect, useRef, useCallback } from 'react'; // Added useCallback
-import { motion, AnimatePresence } from 'framer-motion';
-
-type Testimonial = {
-  image: string;
-  audio: string;
-  text: string;
-  name: string;
-  jobtitle: string;
-};
-
-type ComponentProps = {
-  testimonials: Testimonial[];
-};
-
-export const Component: React.FC<ComponentProps> = ({ testimonials }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const audioPlayerRef = useRef<HTMLAudioElement | null>(null); 
-  const [hasBeenHovered, setHasBeenHovered] = useState<boolean[]>(new Array(testimonials.length).fill(false));
-  const [typedText, setTypedText] = useState('');
-  const typewriterTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const currentTextRef = useRef('');
-
-  const stopAudio = useCallback(() => {
-    // if (audioPlayerRef.current) {
-    //   audioPlayerRef.current.pause(); 
-    //   audioPlayerRef.current.currentTime = 0; 
-    //   audioPlayerRef.current.src = ''; 
-    //   audioPlayerRef.current.load(); 
-    //   audioPlayerRef.current = null; 
-    // }
-  }, []); 
-
-  const startTypewriter = useCallback((text: string) => {
-    if (typewriterTimeoutRef.current) {
-      clearTimeout(typewriterTimeoutRef.current);
-    }
-    setTypedText('');
-    currentTextRef.current = text;
-    
-    let i = 0;
-    const type = () => {
-      if (i <= text.length) {
-        setTypedText(text.slice(0, i));
-        i++;
-        typewriterTimeoutRef.current = setTimeout(type, 50);
-      }
-    };
-    type();
-  }, []);
-  const stopTypewriter = useCallback(() => {
-    if (typewriterTimeoutRef.current) {
-      clearTimeout(typewriterTimeoutRef.current);
-      typewriterTimeoutRef.current = null;
-    }
-    setTypedText('');
-    currentTextRef.current = '';
-  }, []); 
-  const handleMouseEnter = useCallback((index: number) => {
-    
-    stopAudio(); 
-
-    setHoveredIndex(index);
-  
-    // const newAudio = new Audio(`/audio/${testimonials[index].audio}`);
-    // audioPlayerRef.current = newAudio; 
-    // newAudio.play().catch(e => {
-    //     console.warn("Audio playback prevented or failed:", e);
-      
-    // });
-    
-    setHasBeenHovered(prev => {
-      const updated = [...prev];
-      updated[index] = true;
-      return updated;
-    });
-    startTypewriter(testimonials[index].text);
-  }, [testimonials, stopAudio, startTypewriter]); 
-
-  
-  const handleMouseLeave = useCallback(() => {
-    stopAudio(); 
-    setHoveredIndex(null);
-    stopTypewriter();
-  }, [stopAudio, stopTypewriter]);
-  useEffect(() => {
-    return () => {
-      stopAudio(); 
-      stopTypewriter(); 
-    };
-  }, [stopAudio, stopTypewriter]); 
-
-  return (
-    <div className="flex justify-center items-center gap-4 flex-wrap">
-      {testimonials.map((testimonial, index) => (
-        <motion.div
-          key={index}
-          className="relative flex flex-col items-center"
-          onMouseEnter={() => handleMouseEnter(index)} 
-          onMouseLeave={handleMouseLeave}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <motion.img
-            src={testimonial.image}
-            alt={`Testimonial ${index}`}
-            className="w-16 h-16 rounded-full border-4 hover:animate-pulse border-gray-300"
-            animate={{ 
-              borderColor: (hoveredIndex === index || hasBeenHovered[index]) ? '#ACA0FB' : '#E5E7EB'
-            }}
-            transition={{ duration: 0.3 }}
-          />
-          <AnimatePresence>
-            {hoveredIndex === index && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8, y: -10 }}
-                animate={{ opacity: 1, scale: 1, y: -20 }}
-                exit={{ opacity: 0, scale: 0.8, y: -10 }}
-                transition={{ duration: 0.4 }}
-                className="absolute bottom-20 bg-white text-black text-sm px-4 py-3 rounded-lg shadow-2xl max-w-xs w-56"
-              >
-                <div className="h-24 overflow-hidden whitespace-pre-wrap">
-                  {typedText}
-                  <span className="animate-blink">|</span>
-                </div>
-                <p className="mt-2 text-right font-semibold">{testimonial.name}</p>
-                <p className="text-right text-gray-500 text-sm">{testimonial.jobtitle}</p>
-                <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-4">
-                  <div className="w-3 h-3 bg-white rounded-full shadow-lg"></div>
-                  <div className="w-2 h-2 bg-white rounded-full shadow-lg mt-1"></div>
-                  <div className="w-1 h-1 bg-white rounded-full shadow-lg mt-1"></div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
-      ))}
-    </div>
-  );
-};
+{
+  "name": "nextn",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack -p 9002",
+    "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
+    "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
+    "build": "NODE_ENV=production next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@genkit-ai/google-genai": "^1.20.0",
+    "@genkit-ai/next": "^1.20.0",
+    "@hookform/resolvers": "^4.1.3",
+    "@radix-ui/react-accordion": "^1.2.3",
+    "@radix-ui/react-alert-dialog": "^1.1.6",
+    "@radix-ui/react-avatar": "^1.1.3",
+    "@radix-ui/react-checkbox": "^1.1.4",
+    "@radix-ui/react-collapsible": "^1.1.11",
+    "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-dropdown-menu": "^2.1.6",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-menubar": "^1.1.6",
+    "@radix-ui/react-popover": "^1.1.6",
+    "@radix-ui/react-progress": "^1.1.2",
+    "@radix-ui/react-radio-group": "^1.2.3",
+    "@radix-ui/react-scroll-area": "^1.2.3",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-separator": "^1.1.2",
+    "@radix-ui/react-slider": "^1.2.3",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-switch": "^1.1.3",
+    "@radix-ui/react-tabs": "^1.1.3",
+    "@radix-ui/react-toast": "^1.2.6",
+    "@radix-ui/react-tooltip": "^1.1.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.5.0",
+    "embla-carousel-react": "^8.6.0",
+    "firebase": "^11.9.1",
+    "genkit": "^1.20.0",
+    "lucide-react": "^0.475.0",
+    "next": "^15.3.6",
+    "patch-package": "^8.0.0",
+    "react": "^19.2.1",
+    "react-day-picker": "^9.11.3",
+    "react-dom": "^19.2.1",
+    "react-hook-form": "^7.54.2",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19.2.1",
+    "@types/react-dom": "^19.2.1",
+    "genkit-cli": "^1.20.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
