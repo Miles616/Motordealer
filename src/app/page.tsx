@@ -179,6 +179,22 @@ export default function Home() {
                         imageUrl: "https://avatars.githubusercontent.com/u/59521846",
                         profileUrl: "https://github.com/shadcn",
                       },
+                      {
+                        imageUrl: "https://avatars.githubusercontent.com/u/3889938?v=4",
+                        profileUrl: "https://github.com/rauchg",
+                      },
+                      {
+                        imageUrl: "https://avatars.githubusercontent.com/u/810438?v=4",
+                        profileUrl: "https://github.com/gaearon",
+                      },
+                      {
+                        imageUrl: "https://avatars.githubusercontent.com/u/67109815?v=4",
+                        profileUrl: "https://github.com/t3dotgg",
+                      },
+                      {
+                        imageUrl: "https://avatars.githubusercontent.com/u/1500684?v=4",
+                        profileUrl: "https://github.com/leerob",
+                      }
                     ]}
                   />
                 </div>
