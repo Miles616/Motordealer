@@ -1,3 +1,4 @@
+
 import HorizontalScroll from '@/components/HorizontalScroll';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
@@ -33,7 +34,7 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="1">
             <span className="section-nav-item-number">02</span>
-            <span>OUR FLEET</span>
+            <span>THE COLLECTION</span>
           </a>
           <a className="section-nav-item" data-index="2">
             <span className="section-nav-item-number">03</span>
@@ -97,7 +98,7 @@ export default function Home() {
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
-                <div className="chapter">Our Fleet</div>
+                <div className="chapter">The Collection</div>
                 <h2 className="title split-text">Excellence in every vehicle. Precision in every detail.</h2>
                 <div className="text">
                   <p className="split-text">From powerful SUVs to elegant sedans and blistering supercars, our inventory is hand-picked to meet the highest standards of quality and performance. Discover the best of automotive engineering right here in Delhi.</p>
@@ -248,3 +249,5 @@ export default function Home() {
     </>
   );
 }
+
+    
