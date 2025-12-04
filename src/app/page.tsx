@@ -1,7 +1,7 @@
 import HorizontalScroll from '@/components/HorizontalScroll';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 export default function Home() {
   // A helper function to find an image by its ID
@@ -206,7 +206,6 @@ export default function Home() {
                   <h2 className="contact-title">Contact Us</h2>
                   <div className="contact-details">
                     <a href="#" className="contact-item">
-                      <MapPin />
                       <span>Shop No. 12, Near Rice Mill, Vijay Vihar Phase I, Block B, Rithala, Rohini, Delhi 110085, India</span>
                     </a>
                     <div className="contact-item">
