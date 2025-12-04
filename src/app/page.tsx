@@ -34,7 +34,7 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="1">
             <span className="section-nav-item-number">02</span>
-            <span>THE COLLECTION</span>
+            <span>COLLECTION</span>
           </a>
           <a className="section-nav-item" data-index="2">
             <span className="section-nav-item-number">03</span>
@@ -249,5 +249,7 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
