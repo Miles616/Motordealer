@@ -1,7 +1,6 @@
 
-import HorizontalScroll from '@/components/HorizontalScroll';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
   // A helper function to find an image by its ID
@@ -81,10 +80,10 @@ export default function Home() {
             <section className="panel panel-split editorial-split" data-index="0">
               <div className="editorial-content">
                 <div className="panel-content">
-                  <div className="chapter">Welcome to Motor Khan</div>
-                  <h1 className="title split-text">Your Journey to the Perfect Drive Begins in Delhi. We don't just sell cars; we deliver dreams.</h1>
+                  <div className="chapter">Welcome to Motor Khan: Rithala's Trusted Car Dealer</div>
+                  <h1 className="title split-text">Your Journey to the Perfect Drive Begins in Delhi. At Motor Khan, your trusted car dealer in Rithala, we don't just sell used cars; we deliver dreams.</h1>
                   <div className="text">
-                    <p className="split-text">Motor Khan is Delhi's premier destination for luxury and performance vehicles. Our curated collection features the finest automobiles, ensuring an unparalleled driving experience for the discerning enthusiast.</p>
+                    <p className="split-text">Motor Khan is Delhi's premier car dealer for quality second hand cars. Our curated collection in Rohini features the finest affordable used cars for sale, ensuring an unparalleled driving experience.</p>
                   </div>
                 </div>
               </div>
@@ -102,10 +101,10 @@ export default function Home() {
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
-                <div className="chapter">The Collection</div>
-                <h2 className="title split-text">Excellence in every vehicle. Precision in every detail.</h2>
+                <div className="chapter">Our Hand-Picked Used Car Collection</div>
+                <h2 className="title split-text">Find a Wide Selection of Used Cars for Sale in Rohini.</h2>
                 <div className="text">
-                  <p className="split-text">From powerful SUVs to elegant sedans and blistering supercars, our inventory is hand-picked to meet the highest standards of quality and performance. Discover the best of automotive engineering right here in Delhi.</p>
+                  <p className="split-text">Searching for a 'used car near me'? From powerful SUVs to elegant sedans, our inventory is hand-picked to meet the highest standards of quality and performance. Discover the best affordable second hand cars right here in Delhi.</p>
                 </div>
               </div>
             </section>
@@ -129,10 +128,10 @@ export default function Home() {
               </div>
               <div className="editorial-content">
                 <div className="panel-content">
-                  <div className="chapter">Our Promise</div>
-                  <h2 className="title split-text">Transparency, Trust, and a Commitment to Quality.</h2>
+                  <div className="chapter">Our Promise to You</div>
+                  <h2 className="title split-text">Transparency, Trust, and a Commitment to Quality Used Cars.</h2>
                   <div className="text">
-                    <p className="split-text">At Motor Khan, we believe in building lasting relationships. Every vehicle undergoes a rigorous inspection process to ensure it meets our exacting standards. Your satisfaction is our ultimate benchmark for success.</p>
+                    <p className="split-text">At Motor Khan, a leading car dealer in Rohini, we believe in building lasting relationships. Every second hand car undergoes a rigorous inspection to ensure it meets our exacting standards. Your satisfaction is our ultimate benchmark for success.</p>
                   </div>
                 </div>
               </div>
@@ -147,7 +146,7 @@ export default function Home() {
               <div className="panel-full-content">
                 <div className="beyond-text">LEGACY</div>
                 <div className="text">
-                  <p className="split-text">For over a decade, Motor Khan has been a pillar of the automotive community in Delhi. Our legacy is built on a passion for cars and an unwavering dedication to our clients.</p>
+                  <p className="split-text">For over a decade, Motor Khan has been a pillar of the automotive community in Delhi. Our legacy as a top car dealer is built on a passion for cars and an unwavering dedication to our clients looking to buy or sell a car in Rithala.</p>
                 </div>
               </div>
             </section>
@@ -167,7 +166,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="conclusion-text">
-                    <p className="split-text">We're not just selling cars; we are building a community of enthusiasts.</p>
+                    <p className="split-text">We're not just selling cars; we are building a community of enthusiasts who found the best used car for sale with us.</p>
                   </div>
                 </div>
               </div>
@@ -175,14 +174,14 @@ export default function Home() {
                 <div className="panel-content">
                   <div className="direction-label">Priya, Gurugram</div>
                   <div className="quote-container">
-                    <div className="quote">"Finding a trustworthy dealership is hard. Motor Khan stands out with their transparent process and exceptional customer service. I couldn't be happier with my new sedan."</div>
+                    <div className="quote">"Finding a trustworthy car dealer near me is hard. Motor Khan stands out with their transparent process and exceptional customer service. I couldn't be happier with my new sedan."</div>
                     <div className="author">HAPPY CLIENT, 2024</div>
                   </div>
                   <div className="full-quote">
-                    "Their knowledge and passion for cars are evident. They guided me to the perfect vehicle that matched my lifestyle and budget."
+                    "Their knowledge and passion for cars are evident. They guided me to the perfect second hand car that matched my lifestyle and budget."
                   </div>
                   <div className="text">
-                    <p className="split-text">Our greatest pride is the satisfaction of our clients and the stories they share on the road.</p>
+                    <p className="split-text">Our greatest pride is the satisfaction of our clients and the stories they share on the road with their affordable second hand car.</p>
                   </div>
                 </div>
               </div>
@@ -197,7 +196,7 @@ export default function Home() {
               <div className="panel-full-content">
                 <div className="mega-text">POWER</div>
                 <div className="text">
-                  <p className="split-text">Unleash the power within. We specialize in high-performance vehicles that deliver an adrenaline-fueled driving experience.</p>
+                  <p className="split-text">Unleash the power within. We specialize in high-performance used cars that deliver an adrenaline-fueled driving experience without breaking the bank.</p>
                 </div>
               </div>
             </section>
@@ -253,15 +252,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="navigation">
-        <div className="nav-text">SCROLL</div>
-        <div className="nav-progress">
-          <div className="nav-progress-fill"></div>
-        </div>
-        <div className="nav-text">01 / 10</div>
-      </div>
-      <HorizontalScroll />
     </>
   );
 }

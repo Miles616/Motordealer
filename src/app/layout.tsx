@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
+import ClientPageWrapper from '@/components/ClientPageWrapper';
 
 export const metadata: Metadata = {
   title: 'MotorKhan - Car Dealer in Rithala, Rohini, Delhi',
@@ -43,6 +44,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         {children}
+        <ClientPageWrapper />
         <Toaster />
       </body>
     </html>
