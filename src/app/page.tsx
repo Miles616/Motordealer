@@ -17,7 +17,14 @@ export default function Home() {
           </button>
         </div>
         <div className="left-menu-middle">
-          <div className="logo">MOTOR KHAN</div>
+          <div className="logo">
+            <Image
+              src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png"
+              alt="Motor Khan Logo"
+              width={120}
+              height={40}
+            />
+          </div>
         </div>
         <div className="section-nav">
           <a className="section-nav-item" data-index="0">

@@ -149,14 +149,10 @@ body.menu-expanded .page-container {
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-size: var(--text-lg);
-  color: var(--color-text);
-  white-space: nowrap;
+  transition: opacity var(--transition-medium);
+  width: 120px;
+  height: auto;
   transform: rotate(-90deg);
-  transition: transform var(--transition-slow), opacity var(--transition-medium);
 }
 
 .left-menu.expanded .logo {
