@@ -12,7 +12,7 @@ export default function Home() {
           </button>
         </div>
         <div className="left-menu-middle">
-          <div className="logo">SPACE</div>
+          <div className="logo">Motor Khan</div>
         </div>
         <div className="section-nav">
           <a className="section-nav-item" data-index="0">
