@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "welcome-car",
+      "description": "A luxury car in a modern showroom.",
+      "imageUrl": "https://images.unsplash.com/photo-1601929862217-f1bf94503333?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBjYXJ8ZW58MHx8fHwxNzY0Nzk5NzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury car"
+    },
+    {
+      "id": "fleet-car",
+      "description": "A sleek sports car on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1579508542697-bb18e7d9aeaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcG9ydHMlMjBjYXJ8ZW58MHx8fHwxNzY0NzYwMDM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sports car"
+    },
+    {
+      "id": "experience-car",
+      "description": "The luxurious interior of a modern car.",
+      "imageUrl": "https://images.unsplash.com/photo-1629280878139-038999084e23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYXIlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjQ3NjQwODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car interior"
+    },
+    {
+      "id": "promise-car",
+      "description": "A car driving on an open road towards the horizon.",
+      "imageUrl": "https://images.unsplash.com/photo-1478361000558-6f397482ffbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvcGVuJTIwcm9hZHxlbnwwfHx8fDE3NjQ3NjIxMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "open road"
+    },
+    {
+      "id": "legacy-car",
+      "description": "A vintage classic car in pristine condition.",
+      "imageUrl": "https://images.unsplash.com/photo-1587750059638-e7e8c43b99fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGFzc2ljJTIwY2FyfGVufDB8fHx8MTc2NDc0ODgzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classic car"
+    },
+    {
+      "id": "testimonial-car-1",
+      "description": "A happy person standing next to their new car.",
+      "imageUrl": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYXBweSUyMGN1c3RvbWVyfGVufDB8fHx8MTc2NDc1ODExNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy customer"
+    },
+    {
+      "id": "performance-car",
+      "description": "A close-up of a powerful car engine.",
+      "imageUrl": "https://images.unsplash.com/photo-1552656967-7a0991a13906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXIlMjBlbmdpbmV8ZW58MHx8fHwxNzY0NzU2MDMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car engine"
+    }
+  ]
 }

@@ -74,36 +74,39 @@ export default function HorizontalScroll() {
     // Menu animation - add entrance animation for menu items
     const animateMenuItems = (show: boolean) => {
       sectionNavItems.forEach((item, index) => {
+        const typedItem = item as HTMLElement;
         if (show) {
           setTimeout(() => {
-            item.classList.add("animate-in");
+            typedItem.classList.add("animate-in");
           }, 50 + index * 30);
         } else {
-          item.classList.remove("animate-in");
+          typedItem.classList.remove("animate-in");
         }
       });
     };
 
     // Toggle menu expansion with animation
-    menuBtn.addEventListener("click", () => {
-      menuExpanded = !menuExpanded;
-
-      leftMenu.classList.toggle("expanded");
-      document.body.classList.toggle("menu-expanded");
-
-      if (menuExpanded) {
-        setTimeout(() => {
-          animateMenuItems(true);
-        }, 150);
-      } else {
-        animateMenuItems(false);
-      }
-
-      // Update dimensions after menu animation
-      setTimeout(() => {
-        updateDimensions(false);
-      }, 400);
-    });
+    if(menuBtn) {
+        menuBtn.addEventListener("click", () => {
+            menuExpanded = !menuExpanded;
+      
+            leftMenu.classList.toggle("expanded");
+            document.body.classList.toggle("menu-expanded");
+      
+            if (menuExpanded) {
+              setTimeout(() => {
+                animateMenuItems(true);
+              }, 150);
+            } else {
+              animateMenuItems(false);
+            }
+      
+            // Update dimensions after menu animation
+            setTimeout(() => {
+              updateDimensions(false);
+            }, 400);
+          });
+    }
 
     // Improved parallax effect with more subtle movement
     const updateParallax = () => {
@@ -128,10 +131,20 @@ export default function HorizontalScroll() {
     // Update dimensions on resize
     const updateDimensions = (animate = true) => {
       // Calculate panel width based on current window width
-      panelWidth = window.innerWidth;
+      let menuOffset = 60; // --menu-collapsed-width
       if (document.body.classList.contains('menu-expanded')) {
-          panelWidth = window.innerWidth - 250 + 60; // menu width - collapsed width
+          menuOffset = 250; // --menu-width
       }
+      
+      if (window.innerWidth <= 768) { // Mobile
+        panelWidth = window.innerWidth;
+        if (panelsContainer) {
+          panelsContainer.style.width = `${panelWidth}px`;
+        }
+      } else { // Desktop
+        panelWidth = window.innerWidth - menuOffset;
+      }
+
 
       maxScroll = (PANEL_COUNT - 1) * panelWidth;
 
@@ -143,16 +156,23 @@ export default function HorizontalScroll() {
       panels.forEach((panel) => {
         (panel as HTMLElement).style.width = `${panelWidth}px`;
       });
+      if (panelsContainer) {
+        panelsContainer.style.width = `${PANEL_COUNT * panelWidth}px`;
+      }
+
 
       // Apply transform with or without transition
-      if (animate) {
+      if (animate && panelsContainer) {
         panelsContainer.classList.add("transitioning");
         setTimeout(() => {
-          panelsContainer.classList.remove("transitioning");
+            if(panelsContainer) panelsContainer.classList.remove("transitioning");
         }, 400);
       }
 
-      panelsContainer.style.transform = `translateX(-${currentX}px)`;
+      if (panelsContainer) {
+        panelsContainer.style.transform = `translateX(-${currentX}px)`;
+      }
+
 
       // Force parallax update
       updateParallax();
@@ -210,6 +230,7 @@ export default function HorizontalScroll() {
 
     // Update page counter
     const updatePageCount = () => {
+      if (!navText) return;
       const currentPanelIndex = Math.round(currentX / panelWidth) + 1;
       const formattedIndex = currentPanelIndex.toString().padStart(2, "0");
       const totalPanels = PANEL_COUNT.toString().padStart(2, "0");
@@ -237,7 +258,9 @@ export default function HorizontalScroll() {
         targetProgress,
         SMOOTH_FACTOR * 1.5
       );
-      progressFill.style.transform = `scaleX(${currentProgress})`;
+      if(progressFill) {
+        progressFill.style.transform = `scaleX(${currentProgress})`;
+      }
     };
 
     // Update active panel with fixed visibility for backwards navigation
@@ -276,7 +299,10 @@ export default function HorizontalScroll() {
     const animate = () => {
       // Smooth scrolling with lerp
       currentX = lerp(currentX, targetX, SMOOTH_FACTOR);
-      panelsContainer.style.transform = `translateX(-${currentX}px)`;
+      if(panelsContainer) {
+        panelsContainer.style.transform = `translateX(-${currentX}px)`;
+      }
+      
 
       // Update progress and navigation
       updateProgress();
@@ -316,7 +342,9 @@ export default function HorizontalScroll() {
       startScrollX = currentX;
       lastTouchX = e.clientX;
       lastTouchTime = Date.now();
-      document.body.style.cursor = "grabbing";
+      if(document.body) {
+        document.body.style.cursor = "grabbing";
+      }
       e.preventDefault();
     };
 
@@ -340,7 +368,9 @@ export default function HorizontalScroll() {
     const handleMouseUp = () => {
       if (!isDragging) return;
       isDragging = false;
-      document.body.style.cursor = "grab";
+      if (document.body) {
+        document.body.style.cursor = "grab";
+      }
 
       if (Math.abs(velocityX) > 0.5) {
         targetX = clamp(targetX + velocityX * 8, 0, maxScroll);
@@ -412,7 +442,9 @@ export default function HorizontalScroll() {
     });
 
     const resizeObserver = new ResizeObserver(() => updateDimensions(false));
-    resizeObserver.observe(document.body);
+    if (document.body) {
+        resizeObserver.observe(document.body);
+    }
 
 
     // Make sure parallax elements are loaded
