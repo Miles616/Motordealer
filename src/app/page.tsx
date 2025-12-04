@@ -146,7 +146,7 @@ export default function Home() {
               <div className="panel-full-content">
                 <div className="beyond-text">LEGACY</div>
                 <div className="text">
-                  <p className="split-text">For over a decade, Motor Khan has been a pillar of the automotive community in Delhi. Our legacy as a top car dealer is built on a passion for cars and an unwavering dedication to our clients looking to buy or sell a car in Rithala.</p>
+                  <p className="split-text">Founded in 1995 by Shahnawaz Khan in Delhi, Motor Khan has grown from a small shop to a pillar of the automotive community. Our legacy as a top car dealer is built on a passion for cars and an unwavering dedication to our clients looking to buy or sell a car in Rithala.</p>
                 </div>
               </div>
             </section>
@@ -189,7 +189,7 @@ export default function Home() {
 
             {/* Seventh panel: New big text with image */}
             <section className="panel panel-full" data-index="6">
-              <div className="image-wrapper">
+               <div className="image-wrapper">
                 <Image src={getImage('performance-car')?.imageUrl ?? ''} alt="Car engine" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="sports car motion" />
               </div>
               <div className="panel-full-overlay"></div>
