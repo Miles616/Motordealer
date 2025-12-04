@@ -440,8 +440,12 @@ body.menu-expanded .page-container {
 
 .contact-container {
   width: 80%;
-  max-width: 800px;
-  text-align: center;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .contact-content {
@@ -450,92 +454,70 @@ body.menu-expanded .page-container {
   transform: translateY(30px);
   transition: opacity 0.6s var(--ease-out-expo),
     transform 0.6s var(--ease-out-expo);
-}
-
-.contact-name {
-  font-size: clamp(6rem, 15vw, 10rem);
-  color: var(--color-text) !important;
-  margin-bottom: var(--space-12);
-  line-height: 1;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-}
-
-.email-wrapper {
-  position: relative;
-  display: inline-flex;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: var(--space-3);
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: var(--space-4) var(--space-6);
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform var(--transition-medium),
-    background-color var(--transition-medium);
 }
 
-.email-wrapper:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
-}
-
-.email {
+.contact-title {
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
+  font-size: clamp(3rem, 8vw, 6rem);
   color: var(--color-text);
+  margin-bottom: var(--space-8);
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  align-items: flex-start;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-.email:hover {
+.contact-item:hover {
   color: var(--color-accent);
 }
 
-.copy-email {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text);
-  opacity: 0.7;
-  padding: var(--space-2);
+.contact-item svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent);
+  margin-top: 3px;
+}
+
+.contact-phone-numbers {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: opacity var(--transition-fast),
-    background-color var(--transition-fast), transform var(--transition-fast);
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
-.copy-email:hover {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1);
-}
-
-.copy-email:active {
-  transform: scale(0.95);
-}
-
-.copy-tooltip {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--color-accent);
-  color: white;
-  padding: var(--space-1) var(--space-3);
-  border-radius: 4px;
-  font-size: var(--text-xs);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-medium),
-    visibility var(--transition-medium);
-}
-
-.copy-tooltip.active {
-  opacity: 1;
-  visibility: visible;
+.contact-footer {
+  width: 100%;
+  padding: var(--space-5) 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-top: auto;
 }
 
 /* Animation effects */
@@ -903,21 +885,25 @@ body.menu-expanded .page-container {
     font-size: clamp(4rem, 15vw, 8rem);
   }
 
-  .contact-name {
-    font-size: clamp(4rem, 12vw, 8rem);
-    margin-bottom: var(--space-8);
+  .contact-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: var(--space-6);
   }
 
-  .email-wrapper {
+  .contact-details {
+    gap: var(--space-4);
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item {
     flex-direction: column;
-    padding: var(--space-3);
+    align-items: center;
+    gap: var(--space-2);
+    text-align: center;
   }
 
-  .email {
-    font-size: var(--text-xl);
-  }
-
-  .copy-email {
-    margin-top: var(--space-2);
+  .contact-item svg {
+    margin-top: 0;
   }
 }

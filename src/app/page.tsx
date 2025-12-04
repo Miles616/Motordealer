@@ -1,6 +1,7 @@
 import HorizontalScroll from '@/components/HorizontalScroll';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Home() {
   // A helper function to find an image by its ID
@@ -202,20 +203,31 @@ export default function Home() {
             <section className="panel panel-contact" data-index="8">
               <div className="contact-container">
                 <div className="contact-content">
-                  <div className="space-text contact-name">VISIT US</div>
-                  <div className="email-wrapper">
-                    <a href="mailto:contact@motorkhan.com" className="email">contact@motorkhan.com</a>
-                    <button className="copy-email" title="Copy email" aria-label="Copy email to clipboard">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                      </svg>
-                    </button>
-                    <span className="copy-tooltip">Copied!</span>
+                  <h2 className="contact-title">Contact Us</h2>
+                  <div className="contact-details">
+                    <a href="#" className="contact-item">
+                      <MapPin />
+                      <span>Shop No. 12, Near Rice Mill, Vijay Vihar Phase I, Block B, Rithala, Rohini, Delhi 110085, India</span>
+                    </a>
+                    <div className="contact-item">
+                      <Phone />
+                      <div className="contact-phone-numbers">
+                        <a href="tel:+918595853918">+91 8595853918</a>
+                        <a href="tel:+919871358670">+91 9871358670</a>
+                      </div>
+                    </div>
+                    <a href="mailto:motorkhandelhi@gmail.com" className="contact-item">
+                      <Mail />
+                      <span>motorkhandelhi@gmail.com</span>
+                    </a>
                   </div>
                 </div>
+                <footer className="contact-footer">
+                  © 2025 MOTORKHAN. ALL RIGHTS RESERVED.
+                </footer>
               </div>
             </section>
+
           </div>
         </div>
       </div>
