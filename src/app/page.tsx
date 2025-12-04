@@ -69,6 +69,10 @@ export default function Home() {
           </a>
           <a className="section-nav-item" data-index="10">
             <span className="section-nav-item-number">11</span>
+            <span>ADDRESS</span>
+          </a>
+          <a className="section-nav-item" data-index="11">
+            <span className="section-nav-item-number">12</span>
             <span>MAIN WEBSITE</span>
           </a>
         </div>
@@ -259,9 +263,29 @@ export default function Home() {
                 </div>
               </div>
             </section>
-
-            {/* Eleventh panel: Main Website */}
+            
+            {/* Eleventh panel: Address */}
             <section className="panel panel-full" data-index="10">
+              <div className="image-wrapper">
+                  <Image src={getImage('contact-car')?.imageUrl ?? ''} alt="Contact background" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="dealership interior" />
+              </div>
+              <div className="panel-full-overlay"></div>
+              <div className="panel-full-content">
+                <div className="contact-container">
+                  <div className="contact-content">
+                    <div className="contact-name">ADDRESS</div>
+                      <div className="email-wrapper" style={{flexDirection: 'column', gap: 'var(--space-4)', padding: 'var(--space-5)', textAlign: 'center'}}>
+                        <p className="email" style={{fontSize: 'var(--text-lg)', lineHeight: '1.5'}}>
+                          Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085
+                        </p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Twelfth panel: Main Website */}
+            <section className="panel panel-full" data-index="11">
               <div className="panel-full-overlay" style={{backgroundColor: 'var(--color-primary)'}}></div>
               <div className="panel-full-content">
                 <div className="contact-container">

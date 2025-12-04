@@ -25,7 +25,7 @@ export default function HorizontalScroll() {
     // Constants
     const SMOOTH_FACTOR = 0.065;
     const WHEEL_SENSITIVITY = 1.0;
-    const PANEL_COUNT = panels.length;
+    const PANEL_COUNT = 12;
 
     // State variables
     let targetX = 0;
