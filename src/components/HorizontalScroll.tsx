@@ -133,7 +133,7 @@ export default function HorizontalScroll() {
       // Calculate panel width based on current window width
       let menuOffset = 60; // --menu-collapsed-width
       if (document.body.classList.contains('menu-expanded')) {
-          menuOffset = 250; // --menu-width
+          menuOffset = 320; // --menu-width
       }
       
       if (window.innerWidth <= 768) { // Mobile
