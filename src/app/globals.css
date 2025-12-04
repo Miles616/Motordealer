@@ -224,20 +224,22 @@ body.menu-expanded .page-container {
 }
 
 .section-nav-item {
-  font-family: var(--font-display);
-  font-weight: 600;
+  font-family: var(--font-primary);
+  font-weight: 900;
   color: var(--color-text);
   text-decoration: none;
-  margin: var(--space-3) 0;
-  font-size: var(--text-sm);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: var(--space-2) 0;
   opacity: 0;
   transition: opacity var(--transition-slow), transform var(--transition-slow),
     color var(--transition-fast);
   cursor: pointer;
   transform: translateX(-20px);
-  display: flex;
-  align-items: center;
+  position: relative;
   width: 100%;
+  padding-right: var(--space-5);
 }
 
 .section-nav-item.animate-in {
@@ -257,22 +259,23 @@ body.menu-expanded .page-container {
 }
 
 .section-nav-item-number {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-xs);
-  opacity: 0.6;
-  margin-right: var(--space-3);
-  min-width: 20px;
-  transform: translateX(-10px);
-  transition: transform var(--transition-medium),
-    opacity var(--transition-medium);
+  position: absolute;
+  top: -2px;
+  right: 0;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
 }
 
-.section-nav-item.animate-in .section-nav-item-number,
-.section-nav-item:hover .section-nav-item-number {
-  transform: translateX(0);
-  opacity: 0.8;
+.section-nav-item:hover .section-nav-item-number,
+.section-nav-item.active .section-nav-item-number,
+.section-nav-item.animate-in .section-nav-item-number {
+  opacity: 1;
 }
+
 
 /* Improved staggered animation of menu items */
 .left-menu.expanded .section-nav-item:nth-child(1) {

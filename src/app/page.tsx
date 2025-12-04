@@ -21,40 +21,40 @@ export default function Home() {
         </div>
         <div className="section-nav">
           <a className="section-nav-item" data-index="0">
-            <span className="section-nav-item-number">01</span>
             <span>WELCOME</span>
+            <span className="section-nav-item-number">01</span>
           </a>
           <a className="section-nav-item" data-index="1">
-            <span className="section-nav-item-number">02</span>
             <span>OUR FLEET</span>
+            <span className="section-nav-item-number">02</span>
           </a>
           <a className="section-nav-item" data-index="2">
-            <span className="section-nav-item-number">03</span>
             <span>EXPERIENCE</span>
+            <span className="section-nav-item-number">03</span>
           </a>
           <a className="section-nav-item" data-index="3">
-            <span className="section-nav-item-number">04</span>
             <span>OUR PROMISE</span>
+            <span className="section-nav-item-number">04</span>
           </a>
           <a className="section-nav-item" data-index="4">
-            <span className="section-nav-item-number">05</span>
             <span>LEGACY</span>
+            <span className="section-nav-item-number">05</span>
           </a>
           <a className="section-nav-item" data-index="5">
-            <span className="section-nav-item-number">06</span>
             <span>TESTIMONIALS</span>
+            <span className="section-nav-item-number">06</span>
           </a>
           <a className="section-nav-item" data-index="6">
-            <span className="section-nav-item-number">07</span>
             <span>POWER</span>
+            <span className="section-nav-item-number">07</span>
           </a>
           <a className="section-nav-item" data-index="7">
-            <span className="section-nav-item-number">08</span>
             <span>VISION</span>
+            <span className="section-nav-item-number">08</span>
           </a>
           <a className="section-nav-item" data-index="8">
-            <span className="section-nav-item-number">09</span>
             <span>CONTACT</span>
+            <span className="section-nav-item-number">09</span>
           </a>
         </div>
         <div className="left-menu-bottom">
@@ -179,7 +179,7 @@ export default function Home() {
             {/* Seventh panel: New big text with image */}
             <section className="panel panel-full" data-index="6">
               <div className="image-wrapper">
-                <Image src={getImage('performance-car')?.imageUrl ?? ''} alt="Car engine" className="panel-full-background parallax" data-speed="0.3" fill style={{objectFit: 'cover'}} data-ai-hint="car engine" />
+                <Image src={getImage('performance-car')?.imageUrl ?? ''} alt="Car engine" className="panel-full-background parallax" data-speed="0.3" fill style={{objectFit: 'cover'}} data-ai-hint="sports car motion" />
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
