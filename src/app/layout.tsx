@@ -4,8 +4,8 @@ import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
   title: 'MotorKhan - Car Dealer in Rithala, Rohini, Delhi',
-  description: 'Your premier destination for quality second hand cars in Delhi. We are a trusted used car dealer in Rithala and Rohini, offering a wide selection of used cars for sale.',
-  keywords: ['car dealer rithala', 'second hand car', 'used car', 'used car for sale', 'car dealer near me rithala', 'car dealer near me rohini', 'motor khan'],
+  description: 'Your premier destination for quality second hand cars in Delhi. We are a trusted used car dealer in Rithala and Rohini, offering a wide selection of affordable used cars for sale. Sell your car with us.',
+  keywords: ['car dealer rithala', 'second hand car', 'used car', 'used car for sale', 'car dealer near me', 'car dealer near me rithala', 'car dealer near me rohini', 'motor khan', 'car sell rithala', 'affordable second hand car', 'used car rohini', 'second hand car rohini', 'car dealer rohini'],
 };
 
 export default function RootLayout({
