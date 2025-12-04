@@ -158,10 +158,6 @@ export default function Home() {
 
             {/* Sixth panel: Reviews */}
             <section className="panel panel-full" data-index="5">
-              <div className="image-wrapper">
-                <Image src={getImage('testimonial-car-1')?.imageUrl ?? ''} alt="Happy customer with their new car" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="happy customer" />
-              </div>
-              <div className="panel-full-overlay"></div>
               <div className="panel-full-content flex flex-col items-center justify-center">
                 <div className="chapter">What Our Clients Say</div>
                 <h2 className="title split-text">Rated Excellent By Car Lovers In Delhi.</h2>
@@ -227,7 +223,7 @@ export default function Home() {
             {/* Ninth panel: Address */}
             <section className="panel panel-full" data-index="8">
               <div className="image-wrapper">
-                  <Image src={getImage('fleet-car')?.imageUrl ?? ''} alt="Dealership location" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="car dealership" />
+                  <Image src={getImage('legacy-car')?.imageUrl ?? ''} alt="Dealership location" className="panel-full-background parallax" data-speed="0.2" fill style={{objectFit: 'cover'}} data-ai-hint="classic car dealership" />
               </div>
               <div className="panel-full-overlay"></div>
               <div className="panel-full-content">
@@ -265,3 +261,5 @@ export default function Home() {
     </>
   );
 }
+
+    
