@@ -300,6 +300,9 @@ body.menu-expanded .page-container {
 .left-menu.expanded .section-nav-item:nth-child(9) {
   transition-delay: 0.29s;
 }
+.left-menu.expanded .section-nav-item:nth-child(10) {
+  transition-delay: 0.32s;
+}
 
 /* Horizontal container */
 .horizontal-container {
@@ -871,6 +874,21 @@ body.menu-expanded .page-container {
   border-left: 3px solid var(--color-accent);
   width: 100%;
   border-radius: 0 4px 4px 0;
+}
+
+.main-website-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform var(--transition-medium);
+}
+
+.main-website-link:hover {
+  transform: scale(1.05);
+}
+
+.red-text {
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {

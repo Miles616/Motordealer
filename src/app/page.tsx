@@ -64,6 +64,10 @@ export default function Home() {
             <span className="section-nav-item-number">09</span>
             <span>CONTACT</span>
           </a>
+          <a className="section-nav-item" data-index="9">
+            <span className="section-nav-item-number">10</span>
+            <span>MAIN WEBSITE</span>
+          </a>
         </div>
         <div className="left-menu-bottom">
           <div className="copyright">© MotorKhan 2025</div>
@@ -234,6 +238,18 @@ export default function Home() {
               </div>
             </section>
 
+            {/* Tenth panel: Main Website */}
+            <section className="panel panel-full" data-index="9">
+              <div className="panel-full-overlay" style={{backgroundColor: 'var(--color-primary)'}}></div>
+              <div className="panel-full-content">
+                <div className="contact-container">
+                  <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="main-website-link">
+                    <div className="contact-name red-text">MAIN WEBSITE</div>
+                  </a>
+                </div>
+              </div>
+            </section>
+
           </div>
         </div>
       </div>
@@ -243,13 +259,9 @@ export default function Home() {
         <div className="nav-progress">
           <div className="nav-progress-fill"></div>
         </div>
-        <div className="nav-text">01 / 09</div>
+        <div className="nav-text">01 / 10</div>
       </div>
       <HorizontalScroll />
     </>
   );
 }
-
-    
-
-    
